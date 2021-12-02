@@ -64,7 +64,7 @@ Swift Package Manager
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/smartSenseSolutions/SSVerticalSegmentsSlider.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/smartSenseSolutions/SSVerticalSegmentsSlider.git", .upToNextMajor(from: "1.0.1"))
 ]
 ```
 
