@@ -37,7 +37,7 @@ public struct SSVerticalSegmentsSlider: View {
         case invertedTriangle(CGFloat, Int), triangle(CGFloat, Int), straight(CGFloat)
     }
     
-    @State private var totalSegments: Int = 6
+    var totalSegments: Int = 6
     @State private var textSize: CGSize = CGSize.zero
     
     var contentOffSetGap: CGFloat = 12.0    // offset around content
@@ -81,7 +81,7 @@ public struct SSVerticalSegmentsSlider: View {
     // Body handling...
     public var body: some View {
         VStack {
-            SSVerticalSegmentsSlidersView.init(noOfSignals: self.totalSegments,
+            SSVerticalSegmentsSlidersView.init(totalSegments: self.totalSegments,
                                              size: $textSize,
                                              contentOffSetGap: self.contentOffSetGap,
                                              heightOfSegment: self.heightOfSegments,
@@ -110,7 +110,7 @@ public struct SSVerticalSegmentsSlider: View {
 struct SSVerticalSegmentsSlidersView: View {
     @State var heightOfProgress: CGFloat = 0.0
     
-    var noOfSignals: Int
+    var totalSegments: Int
     @Binding var size: CGSize
     var contentOffSetGap: CGFloat
     var heightOfSegment: CGFloat
@@ -173,7 +173,7 @@ struct SSVerticalSegmentsSlidersView: View {
     var isDragEndedCalled: Bool = false
     
     var body: some View {
-        if noOfSignals > 1 {
+        if totalSegments > 1 {
             VStack {
                 RoundedRectangle.init(cornerRadius: 0)
                     .foregroundColor(self.segmentTrackColor)
@@ -237,7 +237,7 @@ struct SSVerticalSegmentsSlidersView: View {
                     .mask(
                         // Masking Segements.
                         SSVerticalSegmentsSliderMaskedView.init(
-                            noOfSignals: self.noOfSignals,
+                            noOfSignals: self.totalSegments,
                             size: $size,
                             contentOffSetGap: self.contentOffSetGap,
                             heightOfSegment: self.heightOfSegment,
