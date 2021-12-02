@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint OnlyPictures.podspec' to ensure this is a
+# Be sure to run `pod lib lint SSVerticalSegmentsSlider.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'smartSense Solutions' => 'open-source@smartsensesolutoins.com' }
     s.source           = { :git => 'https://github.com/smartSenseSolutions/SSVerticalSegmentsSlider.git', :tag => s.version.to_s }
-    # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+    s.social_media_url = 'https://twitter.com/smartsense13'
   
     s.ios.deployment_target = '14.0'
     s.swift_version = '5.0'
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
     s.source_files = 'Sources/SSVerticalSegmentsSlider/**/*'
     
     # s.resource_bundles = {
-    #   'OnlyPictures' => ['OnlyPictures/Assets/*.png']
+    #   'SSVerticalSegmentsSlider' => ['SSVerticalSegmentsSlider/Assets/*.png']
     # }
   
     # s.public_header_files = 'Pod/Classes/**/*.h'
