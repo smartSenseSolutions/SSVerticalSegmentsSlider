@@ -60,7 +60,7 @@ $ pod install
 
 ## Swift Package Manager Install
 
-Swift Package Manager
+**Version:** 1.0.1
 
 ```swift
 dependencies: [
